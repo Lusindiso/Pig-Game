@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: lato, sans-serif;
+  font-weight: 300;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: 8vh 92vh;
+  background-image: linear-gradient(to right bottom, #ca8787f3, #b18989f6),
+    url('../assets/background.jpg');
+
+  background-repeat: round;
+  background-size: cover;
+}
+.header {
+  grid-row: 1/2;
+
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.margin {
+  margin: auto 3px;
+}
+.button {
+  padding: 0.5rem 2rem;
+  margin: auto 3px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 1px 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 2.4rem;
+  color: #ec4d4d;
+  cursor: pointer;
+  transition: all;
+}
+.button:hover {
+  padding: 0.6rem 2.1rem;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+  transition: all;
+}
+.button:active {
+  padding: 0.4rem 1.9rem;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+main {
+  grid-row: 2/3;
+  width: 100%;
+  height: 100%;
+  padding: rem;
+}
+.game-container {
+  margin: 0 auto;
+
+  min-width: 88rem;
+  max-width: 80%;
+  height: 95%;
+  border: 1px solid silver;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.player-name {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.player-score {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 100;
+  color: #ec4d4d;
+  margin-bottom: 130px;
+}
+
+.active {
+  background-color: #f4f1f1;
+}
+.active .player-name {
+  font-weight: 300;
+}
+
+.active .player-name::after {
+  content: '\2022';
+  font-size: 4.7rem;
+  position: absolute;
+  color: #ec4d4d;
+  top: -7px;
+  right: 20%;
+}
+
+.player-current-box {
+  background-color: #ec4d4d;
+  color: #fff;
+  width: 12rem;
+  margin: 0 auto;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.player-current-score {
+  font-size: 3rem;
+}
+body {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  width: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #555;
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  font-weight: 600;
+}
+button:hover i {
+  margin-right: 2rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+i {
+  color: #eb4d4d;
+  display: inline-block;
+  margin-right: 1.5rem;
+  font-size: 3.2rem;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: -4px;
+  transition: margin 0.3s;
+}
+
+.btn-new {
+  top: 12rem;
+}
+.btn-roll {
+  top: 46rem;
+}
+.btn-hold {
+  top: 53rem;
+}
+
+.final-score {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 58rem;
+  font-size: 1.8rem;
+  font-family: lato;
+  text-align: center;
+  padding: 1rem;
+  width: 16rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 17.8rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0px 1rem 6rem rgba(0, 0, 0, 0.1);
+}
+
+.winner {
+  background-image: url('../assets/tenor.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.winner .player-name {
+  font-weight: 300;
+  color: #eb4d4d;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 56.25%;
+  }
+  .game-container {
+    min-width: 60rem;
+    max-width: 97%;
+  }
+  .dice {
+    height: 9rem;
+  }
+}
+@media (max-width: 650px) {
+  html {
+    font-size: 50%;
+  }
+  .game-container {
+    min-width: 46rem;
+    max-width: 97%;
+  }
+  .player-name {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+  .game-container {
+    min-width: 35rem;
+    max-width: 97%;
+  }
+  .header {
+    width: 97%;
+  }
+  .player-name {
+    font-size: 3rem;
+  }
+  .dice {
+    height: 7rem;
+  }
+
+  .final-score {
+    top: 61rem;
+  }
+}
