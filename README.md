@@ -1,5 +1,5 @@
 # Pig Game
->Pig is a simple dice game first described in print by John Scarne in 1945.[1] As with many games of folk origin, Pig is played with many rule variations
+>Pig is a simple dice game first described in print by John Scarne in 1945.[1] As with many games of folk origin, Pig is played with many rule variations. This project is built with react, and uses class components to manage state.
 
 ### Game Preview
 
